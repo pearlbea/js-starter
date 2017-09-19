@@ -1,0 +1,30 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "A bare-bones starter kit for JS applications",
+  "main": "index.js",
+  "scripts": {
+    "setup": "",
+    "build": "webpack",
+    "serve": "webpack-dev-server --open",
+    "start": "",
+    "test": "mocha",
+    "deploy": ""
+  },
+  "author": "pearl latteier & abraham williams",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.0",
+    "eslint-config-google": "^0.9.1",
+    "expect.js": "^0.3.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "mocha": "^3.5.3",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.7",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
