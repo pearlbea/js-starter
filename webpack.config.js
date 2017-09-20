@@ -15,6 +15,7 @@ module.exports = {
     contentBase: "/dist"
   },
   plugins: [
+    new ExtractTextPlugin("style.css"),
     new HtmlWebpackPlugin({
       template: "src/index.ejs",
       hash: true,
@@ -22,25 +23,24 @@ module.exports = {
         removeComments: true
       }
     }),
-    new CleanWebpackPlugin(["dist"]),
-    new ExtractTextPlugin("style.css")
+    new CleanWebpackPlugin(["dist"])
   ],
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
-      },
-      {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
+        use: "file-loader"
       },
       {
         test: /\.tsx?$/,
         use: "ts-loader"
+      },
+      {
+        test: /\.css/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
       }
     ]
   }

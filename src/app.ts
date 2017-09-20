@@ -1,1 +1,3 @@
-console.log("i am index");
+import "./style.css";
+
+console.log("app.ts");
